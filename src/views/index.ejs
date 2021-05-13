@@ -36,6 +36,9 @@
                             on September 24, 2021
                         </p>
                         <a href="/blog/<%= article.id  %>/edit" class="btn btn-link text-info">Edit</a>
+                        <button class="btn btn-danger"
+                        onclick="event.preventDefault(); document.getElementById('form-delete').submit()">Delete</button>
+                        <form action="/blog/<%= article.id  %>?_method=DELETE" id="form-delete" method="POST"></form>
                     </div>
                     <hr />
                     <% }) %> 
